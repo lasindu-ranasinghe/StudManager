@@ -1,0 +1,17 @@
+.textfield-and-button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.textfiels {
+    display: flex;
+    gap: 10px;
+    /* Adjust the gap between text fields */
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    /* Adjust the gap between button and icon */
+}

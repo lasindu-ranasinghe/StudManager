@@ -4,12 +4,16 @@ import HomePage from "./Pages/Home/HomePage";
 import ProfilePage from "./Pages/Profile/ProfilePage";
 import StudRegisterPage from "./Pages/StudRegister/StudRegisterPage";
 import LogPage from "./Pages/Logs/LogPage";
+import NavBar from "./Components/Navigation/NavBar";
+import Drower from "./Components/Drawer/Drower";
 import "./App.css";
 
 function App() {
   return (
     <BrowserRouter>
+      <NavBar />
       <div className="app-container">
+        <Drower />
         <div className="page-content">
           <Routes>
             <Route path="/" element={<HomePage />} />

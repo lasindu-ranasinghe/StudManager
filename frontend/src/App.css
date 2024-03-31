@@ -1,1 +1,37 @@
+/* Apply a CSS reset or ensure margins and paddings are controlled */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  /* Remove space between flex items if any */
+  gap: 0;
+}
+
+.page-content {
+  flex-grow: 1;
+  /* Remove padding if it's causing space, or adjust as needed */
+  padding: 20px;
+}
+
+/* Adjust the SideNavBar styling */
+.side-nav-bar {
+  /* Ensure there's no margin causing the space */
+  margin-right: 0;
+  /* Adjust width or padding as necessary */
+}
+
+
+.nav-bar {
+  z-index: 10;
+  /* Set a higher z-index value for the NavBar */
+}
+
+.drawer {
+  z-index: 0;
+  /* Set a lower z-index value for the Drawer */
+}
