@@ -30,8 +30,6 @@ function HomePage() {
     fetchData(); 
   }, []);
   
-
-
   return (
     <div>
       <h1>Student Management System</h1>
