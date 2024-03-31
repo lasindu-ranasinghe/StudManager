@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -25,4 +23,9 @@ public class Student {
     private String studentDOB;
     private String studentNIC;
     private String studentIntake;
+
+    @ElementCollection
+    private List<String> ongoingCourses;
+    @ElementCollection
+    private List<String> completedCourses;
 }
