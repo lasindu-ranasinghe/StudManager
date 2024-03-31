@@ -15,12 +15,11 @@ import java.util.Map;
 @RestController
 @RequestMapping("api/student")
 public class StudentControllers {
-
 //    EndPoints:
 //    1). Register student:    POST   : /api/student/saveStudent
 //    2). Fetch all students:  GET    : /api/student/getAllStudents
 //    3). Search students:     GET    : /api/student/searchStudent/{studentRegNo}
-//    4). Update student:      GET    : /api/student//updateStudent
+//    4). Update student:      PUT    : /api/student//updateStudent
 //    5). Delete student:      DELETE : /api/student/deleteStudent/{studentRegNo}
 
     @Autowired

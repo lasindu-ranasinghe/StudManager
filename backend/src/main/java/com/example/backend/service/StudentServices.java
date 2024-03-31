@@ -33,7 +33,11 @@ public class StudentServices {
             response.put("status", VarList.RSP_DUPLICATED);
         }else {
             //Mapping the DTO and Entity
-            Student entity = studentRepo.save(modelMapper.map(studentDTO, Student.class));
+            Student entity = modelMapper.map(studentDTO, Student.class);
+            entity.setOngoingCourses(studentDTO.getOngoingCourses());
+            entity.setCompletedCourses(studentDTO.getCompletedCourses());
+            studentRepo.save(entity);
+
             //Updating Reg No
             Integer maxStudentId = entity.getStudentId();
             String customId = studentDTO.getStudentIntake() + "-" + studentDTO.getStudentDegreeCode() + "-" + (maxStudentId);
@@ -68,6 +72,10 @@ public class StudentServices {
                 Student existingStudent = studentRepo.findByStudentRegNo(studentRegNo);
                 // Update existing student entity with values from studentDTO
                 modelMapper.map(studentDTO, existingStudent);
+                // Update ongoingCourses and completedCourses
+                existingStudent.setOngoingCourses(studentDTO.getOngoingCourses());
+                existingStudent.setCompletedCourses(studentDTO.getCompletedCourses());
+
                 studentRepo.save(existingStudent);
                 return VarList.RSP_SUCCESS;
             } else {

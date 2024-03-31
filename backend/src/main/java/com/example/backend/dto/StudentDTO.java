@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Arrays;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -16,5 +19,6 @@ public class StudentDTO {
     private String studentDOB;
     private String studentNIC;
     private String studentIntake;
-
+    private List<String> ongoingCourses;
+    private List<String> completedCourses;
 }
