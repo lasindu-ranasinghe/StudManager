@@ -1,0 +1,2 @@
+# StudManager
+SCTT Assignment
