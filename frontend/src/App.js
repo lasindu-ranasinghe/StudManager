@@ -18,7 +18,10 @@ function App() {
         <div className="page-content">
           <Routes>
             <Route path="/" element={<HomePage />} />
-            <Route path="/profile" element={<ProfilePage />} />
+            <Route
+              path="/profile/:StudentRegNumber"
+              element={<ProfilePage />}
+            />
             <Route path="/StudRegister" element={<StudRegisterPage />} />
             <Route path="/StudUpdate" element={<StudUpdatePage />} />
             <Route path="/logs" element={<LogPage />} />
