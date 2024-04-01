@@ -66,7 +66,7 @@ public class StudentControllers {
     @GetMapping("/getAllStudents")
     public ResponseEntity getAllStudents(){
         try {
-            List<StudentDTO> employeeDTOList = StudentService.getAllEmployee();
+            List<StudentDTO> employeeDTOList = StudentService.getAllStudents();
             responseDTO.setCode(VarList.RSP_SUCCESS);
             responseDTO.setMessage("Success");
             responseDTO.setContent(employeeDTOList);
@@ -139,7 +139,7 @@ public class StudentControllers {
     @DeleteMapping("/deleteStudent/{studentRegNo}")
     public ResponseEntity deleteStudent(@PathVariable String studentRegNo){
         try {
-            String res = StudentService.deleteEmployee(studentRegNo);
+            String res = StudentService.deleteStudent(studentRegNo);
             if (res.equals("00")) {
                 responseDTO.setCode(VarList.RSP_SUCCESS);
                 responseDTO.setMessage("Success");

@@ -50,9 +50,9 @@ public class StudentServices {
         }
         return response;
     }
-    public List<StudentDTO> getAllEmployee(){
-        List<Student> employeeList = studentRepo.findAll();
-        return modelMapper.map(employeeList,new TypeToken<ArrayList<StudentDTO>>(){
+    public List<StudentDTO> getAllStudents(){
+        List<Student> studentList = studentRepo.findAll();
+        return modelMapper.map(studentList,new TypeToken<ArrayList<StudentDTO>>(){
         }.getType());
     }
 
@@ -85,7 +85,7 @@ public class StudentServices {
             return VarList.RSP_ERROR;
         }
     }
-    public String deleteEmployee(String studentRegNo){
+    public String deleteStudent(String studentRegNo){
         if (studentRepo.existsByStudentRegNo(studentRegNo)){
             studentRepo.deleteByStudentRegNo(studentRegNo);
             return VarList.RSP_SUCCESS;
