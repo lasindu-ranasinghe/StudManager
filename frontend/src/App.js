@@ -8,6 +8,7 @@ import LogPage from "./Pages/Logs/LogPage";
 import NavBar from "./Components/Navigation/NavBar";
 import Drower from "./Components/Drawer/Drower";
 import "./App.css";
+import StudCourseUpdate from "./Pages/StudCourses/StudCourseUpdate";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
               element={<StudUpdatePage />}
             />
             <Route path="/logs" element={<LogPage />} />
+            <Route
+              path="/courses/:studRegNumber"
+              element={<StudCourseUpdate />}
+            />
           </Routes>
         </div>
       </div>
