@@ -24,8 +24,8 @@ public class CourseServices {
     private ModelMapper modelMapper;
 
 
-    public List<CourseDTO> getAllCourses(){
-        List<Course> courseList = courseRepo.findAll();
+    public List<CourseDTO> getAllCourses(String degreeCode){
+        List<Course> courseList = courseRepo.findByIncludedDegreesContaining(degreeCode);
         return modelMapper.map(courseList,new TypeToken<ArrayList<CourseDTO>>(){
         }.getType());
     }

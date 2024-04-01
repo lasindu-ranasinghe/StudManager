@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,10 +24,10 @@ public class CourseControllers {
     private CourseServices courseService;
     @Autowired
     private ResponseDTO responseDTO;
-    @GetMapping("/getAllStudents")
-    public ResponseEntity getAllStudents(){
+    @GetMapping("/getAllStudents/{degreeCode}")
+    public ResponseEntity getAllStudents(@PathVariable String degreeCode){
         try {
-            List<CourseDTO> courseDTOList = courseService.getAllCourses();
+            List<CourseDTO> courseDTOList = courseService.getAllCourses(degreeCode);
             responseDTO.setCode(VarList.RSP_SUCCESS);
             responseDTO.setMessage("Success");
             responseDTO.setContent(courseDTOList);
