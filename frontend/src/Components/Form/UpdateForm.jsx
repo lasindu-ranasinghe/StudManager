@@ -84,28 +84,38 @@ const YourComponent = ({ defaultValues }) => {
   };
 
   return (
-    <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: '25ch' } }} noValidate autoComplete="off">
-      <div>
-        <TextField required id="firstNameTF" label="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} />
-        <TextField required id="lastNameTF" label="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} />
-        <TextField required id="addressTF" label="Address" value={address} onChange={(e) => setAddress(e.target.value)} />
-        <TextField required id="nicTF" label="NIC Number" value={nic} onChange={(e) => setNic(e.target.value)} />
-        <TextField required id="intakeTF" label="Intake" type="number" value={intake} onChange={(e) => setIntake(e.target.value)} InputLabelProps={{ shrink: true }} />
-        <TextField select label="Degree" value={degree} onChange={(e) => setDegree(e.target.value)} helperText="Please select your degree">
-          {degrees.map((option) => (
-            <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
-          ))}
-        </TextField>
-        <InputLabel id="courses-label">Courses</InputLabel>
-        <Select labelId="courses-label" id="courses-select" multiple value={selectedCourses} onChange={handleCourseChange} label="Courses">
-          {courses.map((option) => (
-            <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
-          ))}
-        </Select>
-        <TextField required id="dobTF" label="Date of Birth (DD/MM/YY)" value={dob} onChange={(e) => setDob(e.target.value)} />
-        <div><Button variant="contained" onClick={handleSubmit}>Send</Button></div>
-      </div>
-    </Box>
+    <Box component="form" sx={{ '& .MuiTextField-root': { m: 1, width: '65ch' }, }} noValidate autoComplete="off">
+  <div>
+    <div>
+      <TextField required id="firstNameTF" label="First Name" value={firstName} onChange={(e) => setFirstName(e.target.value)} fullWidth />
+      <TextField required id="lastNameTF" label="Last Name" value={lastName} onChange={(e) => setLastName(e.target.value)} fullWidth />
+    </div>
+    <div>
+      <TextField required id="addressTF" label="Address" value={address} onChange={(e) => setAddress(e.target.value)} fullWidth />
+      <TextField required id="nicTF" label="NIC Number" value={nic} onChange={(e) => setNic(e.target.value)} fullWidth />
+    </div>
+    <div>
+      <TextField required id="intakeTF" label="Intake" type="number" value={intake} onChange={(e) => setIntake(e.target.value)} InputLabelProps={{ shrink: true, }} width='65ch' />
+      <TextField select label="Degree" value={degree} onChange={(e) => setDegree(e.target.value)} helperText="Please select your degree" fullWidth>
+        {degrees.map((option) => (
+          <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
+        ))}
+      </TextField>
+    </div>
+    <div>
+      <InputLabel id="courses-label">Courses</InputLabel>
+      <Select labelId="courses-label" id="courses-select" multiple value={selectedCourses} onChange={handleCourseChange} label="  Courses" sx={{ width: '65ch', marginLeft:'10px', marginTop:'10px' }}>
+        {courses.map((option) => (
+          <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
+        ))}
+      </Select>
+      <TextField required id="dobTF" label="Date of Birth (DD/MM/YY)" value={dob} onChange={(e) => setDob(e.target.value)}  sx={{ width: '65ch', marginLeft:'10px'}}/>
+    </div>
+    <div style={{ marginTop: '20px' , marginLeft:'10px'}}>
+      <Button variant="contained" onClick={handleSubmit} >Update</Button>
+    </div>
+  </div>
+</Box>
   );
 };
 

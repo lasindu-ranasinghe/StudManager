@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { DataGrid } from '@mui/x-data-grid';
-import AccountBoxIcon from '@mui/icons-material/AccountBox';
+import Avatar from '@mui/material/Avatar';
 import { useNavigate } from 'react-router-dom';
 
 export default function DataTable({ studentDetails }) {
@@ -30,7 +30,7 @@ const rows = studentDetails.content?.map((student, index) => ({
       field: 'id',
       headerName: '',
       width: 40,
-      renderCell: (params) => <AccountBoxIcon />,
+      renderCell: (params) => <Avatar>L</Avatar>,
     },
     { field: 'name', headerName: (<div style={{ fontWeight: 'bold' }}>Name</div>), width: 400},
     { field: 'studentid', headerName: (<div style={{ fontWeight: 'bold' }}>Student ID</div>), width: 400 },

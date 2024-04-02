@@ -7,11 +7,15 @@ import Divider from '@mui/material/Divider';
 const style = {
   py: 0,
   width: '100%',
-  maxWidth: 360,
+  maxWidth: 600,
   borderRadius: 2,
   border: '1px solid',
   borderColor: 'divider',
   backgroundColor: 'background.paper',
+};
+const listItemStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
 };
 
 export default function DividerVariants({ studentDetail }) {
@@ -33,12 +37,12 @@ export default function DividerVariants({ studentDetail }) {
 
   return (
     <List sx={style}>
-      {stringArray.map((text, index) => (
-        <React.Fragment key={index}>
-          <ListItem>
-            <ListItemText primary={text} />
+      {rows.map((row) => (
+        <React.Fragment key={row.id}>
+          <ListItem style={listItemStyle}>
+            <ListItemText primary={row.property} secondary={row.value} />
           </ListItem>
-          {index !== stringArray.length - 1 && <Divider component="li" />}
+          {row.id !== rows.length && <Divider component="li" />}
         </React.Fragment>
       ))}
     </List>

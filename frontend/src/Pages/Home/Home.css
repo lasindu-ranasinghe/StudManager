@@ -2,16 +2,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 20px;
+    margin-left: 0px;
+  
 }
 
 .textfiels {
     display: flex;
     gap: 10px;
+    height: auto;
+    width: 700px;
     /* Adjust the gap between text fields */
 }
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 30px;
     /* Adjust the gap between button and icon */
+}
+.header{
+    margin-top: 50px;
 }

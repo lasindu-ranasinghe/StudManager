@@ -43,7 +43,7 @@ export default function StudUpdatePage() {
 
   return (
     <div>
-      <h1>Update Student’s Details</h1>
+      <div style={{ marginTop: '50px' }}><h1>Update Student’s Details</h1></div>
       <Form defaultValues={jsonObject}/>
     </div>
   )
