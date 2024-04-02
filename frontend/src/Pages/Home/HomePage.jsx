@@ -34,11 +34,7 @@ useEffect(() => {
 
   const handleSearch = (e) => {
     if (e.key === 'Enter') {
-      // Logic to filter students based on searchValue
-      const filteredStudents = students.content.filter(student => {
-        return student.studentRegNo.toLowerCase().includes(searchValue.toLowerCase());
-      });
-      setStudents(filteredStudents);
+      navigate(`/profile/${searchValue}`)
     }
   };
 

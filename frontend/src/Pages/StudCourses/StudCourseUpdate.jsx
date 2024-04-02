@@ -3,6 +3,7 @@ import Tabs from '../../Components/Tabs/Tabs'
 import { Button} from '@mui/material';
 import {getAllCourses,getOngoingCourses,getStudent,UpdateStudent} from '../../APIs/StudentAPIs';
 import { useParams,useNavigate } from 'react-router-dom'; 
+import { Margin } from '@mui/icons-material';
 
 export default function StudCourseUpdate() {
     const { studRegNumber } = useParams();
@@ -72,7 +73,7 @@ const handleSubmit = async () => {
         setAllCourses={setAllCourses}
         ongoingCourses={ongoingCourses}
         setOngoingCourses={setOngoingCourses}/>
-        <div><Button variant="contained" size="small" onClick={handleSubmit}>DONE</Button></div>
+        <div style={{ margin: '10px' }}><Button variant="contained" size="small" onClick={handleSubmit}>DONE</Button></div>
     </div>
   )
 }

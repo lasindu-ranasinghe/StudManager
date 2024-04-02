@@ -26,3 +26,195 @@
 2024-04-02T14:14:20.225+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
 2024-04-02T14:14:20.303+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
 2024-04-02T14:14:20.574+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:34:33.832+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Received request to update student: StudentDTO(studentRegNo=39-bse-1, studentFirstName=Lasindu, studentLastName=Ranasinghe, studentAddress=Rathmalana, studentDegreeCode=bse, studentDOB=14/12/2001, studentNIC=200134901408, studentIntake=39, ongoingCourses=[], completedCourses=null)
+2024-04-02T14:34:33.898+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Student updated successfully.
+2024-04-02T14:35:00.133+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:35:00.193+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:35:00.205+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:35:00.250+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:41:15.278+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:41:15.315+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:41:15.324+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:41:15.359+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:41:20.589+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:41:20.599+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:41:20.606+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:41:20.616+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:42:32.649+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Received request to update student: StudentDTO(studentRegNo=39-bse-1, studentFirstName=Lasindu, studentLastName=Ranasinghe, studentAddress=Rathmalana, studentDegreeCode=bse, studentDOB=14/12/2001, studentNIC=200134901408, studentIntake=39, ongoingCourses=[MATH301, CS101], completedCourses=null)
+2024-04-02T14:42:32.669+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Student updated successfully.
+2024-04-02T14:42:38.643+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:42:38.654+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:42:38.659+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:42:38.667+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:42:49.231+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:42:49.271+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:42:49.277+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:42:49.303+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:42:55.406+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:42:55.414+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:42:55.420+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:42:55.433+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:42:57.353+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:42:57.362+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:42:57.367+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:42:57.376+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:43:01.446+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:43:01.454+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:43:01.458+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:43:01.468+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:43:04.559+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:43:04.602+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:43:04.607+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:43:04.650+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:43:06.583+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:43:06.592+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:43:06.595+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:43:06.604+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:43:35.958+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:43:35.986+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:43:35.991+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:43:36.008+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:45:06.834+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:45:06.854+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:45:06.861+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:45:06.876+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:48:58.010+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bce
+2024-04-02T14:48:58.026+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bce
+2024-04-02T14:49:09.874+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:49:09.889+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:50:04.771+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T14:50:04.798+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T14:50:04.802+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:51:02.669+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:51:02.683+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:51:02.704+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T14:51:02.721+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T14:51:02.721+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:51:02.737+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:51:02.745+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:55:22.725+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T14:55:22.838+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T14:55:22.867+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T14:55:22.891+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T14:55:22.892+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:55:22.902+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:55:22.910+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:58:01.732+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:58:01.755+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:58:01.760+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:58:01.784+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:58:13.692+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:58:13.700+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:58:13.704+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:58:13.710+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T14:58:13.712+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:58:13.727+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T14:58:13.728+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:58:13.737+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T14:58:13.752+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T14:58:13.752+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:58:32.019+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:58:32.027+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:58:32.031+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:58:32.037+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:58:35.090+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:58:35.096+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:58:35.100+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:58:35.107+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T14:58:35.107+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T14:58:35.126+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T14:58:35.126+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:58:35.140+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T14:58:35.157+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T14:58:35.157+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:58:36.000+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:58:36.019+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:58:36.023+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T14:58:36.041+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T14:59:57.822+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bcs-3
+2024-04-02T14:59:57.829+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.StudentControllers      : Student with registration number 39-bcs-3 found.
+2024-04-02T14:59:57.834+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bcs-3
+2024-04-02T14:59:57.839+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bcs-3
+2024-04-02T14:59:57.840+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Student with registration number 39-bcs-3 found.
+2024-04-02T14:59:57.853+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: []
+2024-04-02T14:59:57.853+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T14:59:57.859+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bcs-3
+2024-04-02T14:59:57.872+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: []
+2024-04-02T14:59:57.872+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:00:00.941+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T15:00:00.952+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T15:00:00.956+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T15:00:00.962+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bcs-3
+2024-04-02T15:00:00.969+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T15:00:00.977+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: []
+2024-04-02T15:00:00.977+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:00:00.980+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bcs-3
+2024-04-02T15:00:00.984+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bcs-3
+2024-04-02T15:00:00.991+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Student with registration number 39-bcs-3 found.
+2024-04-02T15:00:00.992+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: []
+2024-04-02T15:00:00.993+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:00:01.046+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bcs-3
+2024-04-02T15:00:01.051+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Student with registration number 39-bcs-3 found.
+2024-04-02T15:01:00.057+05:30  WARN 41760 --- [backend] [http-nio-8080-exec-9] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Cannot construct instance of `com.example.backend.dto.StudentDTO` (although at least one Creator exists): no String-argument constructor/factory method to deserialize from String value ('39-bcs-3')]
+2024-04-02T15:07:26.583+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T15:07:26.596+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T15:07:26.602+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T15:07:26.612+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T15:07:26.627+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bcs-3
+2024-04-02T15:07:26.639+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: []
+2024-04-02T15:07:26.639+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:07:26.642+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bcs-3
+2024-04-02T15:07:26.655+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: []
+2024-04-02T15:07:26.655+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:07:26.826+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bcs-3
+2024-04-02T15:07:26.833+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Student with registration number 39-bcs-3 found.
+2024-04-02T15:07:26.837+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bcs-3
+2024-04-02T15:07:26.842+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.StudentControllers      : Student with registration number 39-bcs-3 found.
+2024-04-02T15:07:32.422+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T15:07:32.443+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T15:07:32.446+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T15:07:32.465+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T15:19:22.699+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T15:19:22.710+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T15:19:34.727+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T15:19:34.730+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T15:19:34.732+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T15:19:34.736+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T15:19:34.736+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T15:19:34.745+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T15:19:34.745+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-5] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:19:34.747+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T15:19:34.754+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T15:19:34.755+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-8] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:19:43.520+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T15:19:43.525+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T15:19:43.527+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Received request to get all courses for degree code: bse
+2024-04-02T15:19:43.530+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T15:19:43.532+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.CourseControllers       : Retrieved 13 courses for degree code: bse
+2024-04-02T15:19:43.538+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T15:19:43.538+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:19:43.540+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T15:19:43.543+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T15:19:43.545+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T15:19:43.547+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T15:19:43.547+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:19:43.572+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T15:19:43.575+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T15:20:13.329+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T15:20:13.337+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-7] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T15:20:13.338+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T15:20:13.348+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-3] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T15:22:06.546+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T15:22:06.550+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-1] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T15:22:06.553+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T15:22:06.556+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T15:22:06.557+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-6] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.
+2024-04-02T15:22:06.565+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T15:22:06.565+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-9] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:22:06.567+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Received request to get all courses of user with registration number: 39-bse-1
+2024-04-02T15:22:06.578+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved ongoing courses: [CourseDTO(courseId=8, courseCode=CS101, courseName=Introduction to Computer Science, CourseCredits=3, includedDegrees=[bse, bce]), CourseDTO(courseId=10, courseCode=MATH301, courseName=Calculus I, CourseCredits=4, includedDegrees=[bse, bce])]
+2024-04-02T15:22:06.578+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.CourseControllers       : Retrieved completed courses: []
+2024-04-02T15:22:13.370+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T15:22:13.384+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-10] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.
+2024-04-02T15:22:13.386+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Received request to get all students.
+2024-04-02T15:22:13.395+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-4] c.e.b.Controller.StudentControllers      : Retrieved 14 students from the database.

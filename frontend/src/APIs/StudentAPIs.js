@@ -25,7 +25,7 @@ const getAllCourses = async (degreecode) => {
 const getOngoingCourses = async (studRegNumber) => {
     try {
         const response = await axios.get(
-            `/api/courses/getAllCousesOfUser/${studRegNumber}`,
+            `/api/courses/getAllCoursesOfUser/${studRegNumber}`,
             {
                 headers: getHeaders(),
             }
