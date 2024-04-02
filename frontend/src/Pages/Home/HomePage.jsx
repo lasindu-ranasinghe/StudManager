@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Table from "../../Components/Table/Table";
+import Table from "../../Components/Table/HomeTable";
 import { TextField,Button } from '@mui/material';
 import SettingsIcon from '@mui/icons-material/Settings';
-import axios from 'axios'; 
+import {getAllStudents} from '../../APIs/StudentAPIs';
 import "./Home.css"
 
 function HomePage() {
@@ -15,18 +15,20 @@ function HomePage() {
     navigate('/StudRegister');
   };
 
-  const fetchData = async () => {
+
+useEffect(() => {
+  const fetchStudents = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/student/getAllStudents");
-      setStudents(response.data); 
+      const response = await getAllStudents();
+      setStudents(response);
     } catch (error) {
-      console.error('Error fetching data:', error);
+      console.error('Failed to fetch students:', error);
     }
   };
 
-  useEffect(() => {
-    fetchData(); 
-  }, []);
+  fetchStudents();
+}, []);
+
 
   console.log(students.content);
 

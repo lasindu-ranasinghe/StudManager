@@ -1,75 +1,63 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import Tabs from '../../Components/Tabs/Tabs'
 import { Button} from '@mui/material';
+import {getAllCourses,getOngoingCourses,getStudent,UpdateStudent} from '../../APIs/StudentAPIs';
+import { useParams,useNavigate } from 'react-router-dom'; 
 
 export default function StudCourseUpdate() {
+    const { studRegNumber } = useParams();
+    useEffect(() => {
+  const fetchStudents = async () => {
+    try {
+      const responseAllCourseObjectArray = await getAllCourses('bse');
+      const responseOngoingCourseObjectArray = await getOngoingCourses(studRegNumber);
+      const StuentDetailsObject = await getStudent(studRegNumber);
+      console.log("all courses",responseAllCourseObjectArray);
+      console.log("all ongoing courses",responseOngoingCourseObjectArray);
 
-      const allcourses1 = [
-  {
-    id: 1,
-    name: 'Introduction to Computer Science',
-    code: 'CS101',
-    credits: 3,
-    status:'',
-    action: 'Enroll',
-  },
-  {
-    id: 1,
-    name: 'Introduction to Computer Science',
-    code: 'CS101',
-    credits: 3,
-    status:'',
-    action: 'Enroll',
-  },
-  {
-    id: 1,
-    name: 'Introduction to Computer Science',
-    code: 'CS101',
-    credits: 3,
-    status:'',
-    action: 'Enroll',
-  },
-  {
-    id: 1,
-    name: 'Introduction to Computer Science',
-    code: 'CS101',
-    credits: 3,
-    status:'',
-    action: 'Enroll',
-  },
-  {
-    id: 1,
-    name: 'Introduction to Computer Science',
-    code: 'CS101',
-    credits: 3,
-    status:'',
-    action: 'Enroll',
-  },
-];
+          const AllCourseNameArray = responseAllCourseObjectArray.map(item => ({
+            id: item.courseId,
+            name: item.courseName,
+            code: item.courseCode,
+            credits: item.courseCredits,
+            status:'',
+            action: 'Enroll',
+            }));
+            const OngoingNameArray = responseOngoingCourseObjectArray.map(item => ({
+            id: item.courseId,
+            name: item.courseName,
+            code: item.courseCode,
+            credits: item.courseCredits,
+            status:'',
+            action: 'Complete',
+            }));
 
-const [allCourses, setAllCourses] = useState(allcourses1);
+          setOngoingCourses(OngoingNameArray);
+          setAllCourses(AllCourseNameArray);
+          setStudent(StuentDetailsObject);
+
+    } catch (error) {
+      console.error('Failed to fetch students:', error);
+    }
+  };
+
+  fetchStudents();
+}, []);
+
+const [allCourses, setAllCourses] = useState([]);
 const [ongoingCourses, setOngoingCourses] = useState([]);
+const [StuentDetails, setStudent] = useState();
 
 const handleSubmit = async () => {
   
   try {
     console.log("All Courses: ",allCourses);
     console.log("Ongoing Courses: ",ongoingCourses);
-    // const response = await fetch('http://localhost:8080/api/student/saveStudent', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify(jsonObject),
-    // });
-
-    // if (!response.ok) {
-    //   throw new Error(`HTTP error! status: ${response.status}`);
-    // }
-
-    // const data = await response.json();
-    // console.log('Success:', data);
-    // // Handle success response
+    const ongoingcourseCodes = ongoingCourses.map(obj => obj.code);
+    StuentDetails.ongoingCourses = ongoingcourseCodes;
+    const reposponse = await UpdateStudent(studRegNumber);
+    alert(reposponse);
+    
   } catch (error) {
     console.error('Error:', error);
     // Handle errors here

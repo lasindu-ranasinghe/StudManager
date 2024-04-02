@@ -10,4 +10,5 @@ import java.util.List;
 public interface CourseRepo extends JpaRepository<Course,String> {
     @Query("SELECT c FROM Course c JOIN c.includedDegrees d WHERE d = :degreeCode")
     List<Course> findByIncludedDegreesContaining(@Param("degreeCode") String degreeCode);
+    List<Course> findByCourseCodeIn(List<String> courseCodes);
 }

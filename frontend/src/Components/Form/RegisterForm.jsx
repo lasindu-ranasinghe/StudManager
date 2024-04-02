@@ -3,9 +3,17 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import { Select, InputLabel, Button } from '@mui/material';
+import { getAllCourses } from '../../APIs/StudentAPIs'; 
+
 
 const YourComponent = () => {
   const [selectedCourses, setSelectedCourses] = useState([]);
+  const [courses, setCourses] = useState([
+    { value: 'CS101', label: 'Introduction to Computer Science' },
+    { value: 'MATH101', label: 'Calculus I' },
+    { value: 'ENG101', label: 'English Composition' },
+    { value: 'ECON101', label: 'Principles of Economics' },
+  ]); // State to hold courses
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [address, setAddress] = useState('');
@@ -14,12 +22,22 @@ const YourComponent = () => {
   const [degree, setDegree] = useState('');
   const [dob, setDob] = useState('');
 
-  const courses = [
-    { value: 'CS101', label: 'Introduction to Computer Science' },
-    { value: 'MATH101', label: 'Calculus I' },
-    { value: 'ENG101', label: 'English Composition' },
-    { value: 'ECON101', label: 'Principles of Economics' },
-  ];
+  // Update the courses state when a degree is selected
+  const handleDegreeChange = async (event) => {
+    const selectedDegree = event.target.value;
+    setDegree(selectedDegree);
+
+    try {
+      const coursesForDegree = await getAllCourses(selectedDegree);
+      const formattedCourses = coursesForDegree.map((course) => ({
+        value: course.courseCode,
+        label: course.courseName, 
+      }));
+      setCourses(formattedCourses);
+    } catch (error) {
+      console.error('Failed to fetch courses for the selected degree:', error);
+    }
+  };
 
   const degrees = [
     { value: 'bse', label: 'Software Engineering' },
@@ -81,7 +99,7 @@ const handleSubmit = async () => {
     </div>
     <div>
       <TextField required id="intakeTF" label="Intake" type="number" value={intake} onChange={(e) => setIntake(e.target.value)} InputLabelProps={{ shrink: true, }} width='65ch' />
-      <TextField select label="Degree" value={degree} onChange={(e) => setDegree(e.target.value)} helperText="Please select your degree" fullWidth>
+      <TextField select label="Degree" value={degree} onChange={handleDegreeChange} helperText="Please select your degree" fullWidth>
         {degrees.map((option) => (
           <MenuItem key={option.value} value={option.value}>{option.label}</MenuItem>
         ))}

@@ -5,6 +5,7 @@ import { Button, Divider,Avatar,Alert} from '@mui/material';
 import Table from '../../Components/Table/ProfileTable';
 import axios from 'axios';
 import { useParams,useNavigate } from 'react-router-dom'; 
+import {getOngoingCourses} from '../../APIs/StudentAPIs';
 
 
 export default function ProfilePage() {
@@ -32,11 +33,21 @@ const handleDeleteButton = async () => {
   
     //Methord for calling GetStudentDetails endpoint
   const [students, setStudents] = useState([]);
+  const [ongoingArray, setOngoingNameArray] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(`http://localhost:8080/api/student/searchStudent/${studRegNumber}`);
         setStudents(response.data);
+
+        // If student data is fetched successfully, make another API call
+        if (response.data && response.data.content) {
+          const studentRegNo = response.data.content.studentRegNo;
+          const ongoingObjectArray = await getOngoingCourses(studentRegNo);
+          const OngoingNameArray = ongoingObjectArray.map(obj => obj.courseName);
+          setOngoingNameArray(OngoingNameArray);
+        }
       } catch (error) {
         console.error('Error fetching data:', error);
       }
@@ -85,7 +96,7 @@ const handleDeleteButton = async () => {
 
       {/* Right side grid */}
       <Grid item xs={6} style={{ backgroundColor: 'rgba( 33, 150, 243, 0.08)', height: '100vh'}} marginRight={'0px'}>
-        <CostomList items={['Item 1', 'Item 2', 'Item 3']} />
+        <CostomList items={ongoingArray} backgroundColor={'#E1BEE7'} margin={'5px'}/>
         <Button variant="contained" size="small" onClick={handleAllCoursesButton}>see all enrolled courses</Button>
       </Grid>
     </Grid>

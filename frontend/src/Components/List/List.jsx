@@ -1,22 +1,25 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
 
-const CostomList = ({ items }) => {
+const CostomList = ({ items, backgroundColor, margin }) => {
   return (
-    <List component="nav">
+    <List style={{ backgroundColor, margin }}>
       {items.map((item, index) => (
-        <React.Fragment key={index}>
-          <ListItem button>
-            <ListItemText primary={item} />
-          </ListItem>
-          {index !== items.length - 1 && <Divider />}
-        </React.Fragment>
+        <ListItem key={index}>
+          <ListItemText primary={item} />
+        </ListItem>
       ))}
     </List>
   );
+};
+
+CostomList.propTypes = {
+  items: PropTypes.array.isRequired,
+  backgroundColor: PropTypes.string.isRequired,
+  margin: PropTypes.string
 };
 
 export default CostomList;

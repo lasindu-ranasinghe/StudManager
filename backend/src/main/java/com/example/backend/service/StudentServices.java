@@ -1,7 +1,10 @@
 package com.example.backend.service;
 
+import com.example.backend.dto.CourseDTO;
 import com.example.backend.dto.StudentDTO;
+import com.example.backend.entity.Course;
 import com.example.backend.entity.Student;
+import com.example.backend.repo.CourseRepo;
 import com.example.backend.repo.StudentRepo;
 import com.example.backend.util.VarList;
 import jakarta.transaction.Transactional;
@@ -21,6 +24,8 @@ public class StudentServices {
 
     @Autowired
     private StudentRepo studentRepo;
+    @Autowired
+    private CourseRepo couseRepo;
 
     @Autowired
     private ModelMapper modelMapper;
@@ -91,6 +96,27 @@ public class StudentServices {
             return VarList.RSP_SUCCESS;
         }else {
             return VarList.RSP_NO_DATA_FOUND;
+        }
+    }
+
+    public List<CourseDTO> findOngoingCoursesForStudent(String studentRegNo) {
+        if (studentRepo.existsByStudentRegNo(studentRegNo)){
+            Student student =studentRepo.findByStudentRegNo(studentRegNo);
+            List<String> ongoingCourseCodes = student.getOngoingCourses();
+            List<Course> courseList = couseRepo.findByCourseCodeIn(ongoingCourseCodes);
+            return modelMapper.map(courseList, new TypeToken<List<CourseDTO>>() {}.getType());
+        }else {
+            return null;
+        }
+    }
+    public List<CourseDTO> findCompletedCoursesForStudent(String studentRegNo) {
+        if (studentRepo.existsByStudentRegNo(studentRegNo)){
+            Student student =studentRepo.findByStudentRegNo(studentRegNo);
+            List<String> completedCodes = student.getCompletedCourses();
+            List<Course> courseList = couseRepo.findByCourseCodeIn(completedCodes);
+            return modelMapper.map(courseList, new TypeToken<List<CourseDTO>>() {}.getType());
+        }else {
+            return null;
         }
     }
 }
