@@ -1,0 +1,28 @@
+2024-04-02T14:12:43.280+05:30  INFO 41760 --- [backend] [main] com.example.backend.BackendApplication   : Starting BackendApplication using Java 17.0.4.1 with PID 41760 (C:\Users\Lasindu\Desktop\Projects\Complete Java Projects\StudManager\backend\target\classes started by Lasindu in C:\Users\Lasindu\Desktop\Projects\Complete Java Projects\StudManager\backend)
+2024-04-02T14:12:43.284+05:30  INFO 41760 --- [backend] [main] com.example.backend.BackendApplication   : No active profile set, falling back to 1 default profile: "default"
+2024-04-02T14:12:44.243+05:30  INFO 41760 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-04-02T14:12:44.338+05:30  INFO 41760 --- [backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
+2024-04-02T14:12:45.108+05:30  INFO 41760 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-04-02T14:12:45.124+05:30  INFO 41760 --- [backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-04-02T14:12:45.125+05:30  INFO 41760 --- [backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2024-04-02T14:12:45.220+05:30  INFO 41760 --- [backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-04-02T14:12:45.222+05:30  INFO 41760 --- [backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1877 ms
+2024-04-02T14:12:45.523+05:30  INFO 41760 --- [backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-04-02T14:12:45.636+05:30  INFO 41760 --- [backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2024-04-02T14:12:45.701+05:30  INFO 41760 --- [backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-04-02T14:12:46.134+05:30  INFO 41760 --- [backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-04-02T14:12:46.181+05:30  INFO 41760 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-04-02T14:12:46.419+05:30  INFO 41760 --- [backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7103745
+2024-04-02T14:12:46.422+05:30  INFO 41760 --- [backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-04-02T14:12:46.509+05:30  WARN 41760 --- [backend] [main] org.hibernate.dialect.Dialect            : HHH000511: The 5.5.0 version for [org.hibernate.dialect.MySQLDialect] is no longer supported, hence certain features may not work properly. The minimum supported version is 8.0.0. Check the community dialects project for available legacy versions.
+2024-04-02T14:12:48.110+05:30  INFO 41760 --- [backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-04-02T14:12:48.342+05:30  INFO 41760 --- [backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-04-02T14:12:48.719+05:30  INFO 41760 --- [backend] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2024-04-02T14:12:49.519+05:30  WARN 41760 --- [backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-04-02T14:12:50.061+05:30  INFO 41760 --- [backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2024-04-02T14:12:50.074+05:30  INFO 41760 --- [backend] [main] com.example.backend.BackendApplication   : Started BackendApplication in 7.457 seconds (process running for 8.369)
+2024-04-02T14:14:20.223+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-04-02T14:14:20.224+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-04-02T14:14:20.225+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-04-02T14:14:20.303+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Received request to search student with registration number: 39-bse-1
+2024-04-02T14:14:20.574+05:30  INFO 41760 --- [backend] [http-nio-8080-exec-2] c.e.b.Controller.StudentControllers      : Student with registration number 39-bse-1 found.

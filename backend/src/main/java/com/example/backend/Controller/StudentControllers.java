@@ -175,7 +175,6 @@ public class StudentControllers {
         }
     }
 
-    }
 
     @DeleteMapping("/deleteStudent/{studentRegNo}")
     public ResponseEntity deleteStudent(@PathVariable String studentRegNo) {
