@@ -6,6 +6,8 @@ import com.example.backend.dto.StudentDTO;
 import com.example.backend.service.CourseServices;
 import com.example.backend.service.StudentServices;
 import com.example.backend.util.VarList;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -22,6 +24,7 @@ public class CourseControllers {
     //    EndPoints:
     //    1). Get all courses for a student:    GET   : /api/courses/getAllStudents
 
+    Logger logger = LoggerFactory.getLogger(CourseControllers.class);
     @Autowired
     private CourseServices courseService;
     @Autowired
@@ -29,39 +32,53 @@ public class CourseControllers {
     @Autowired
     private ResponseDTO responseDTO;
     @GetMapping("/getAllCourses/{degreeCode}")
-    public ResponseEntity getAllCourses(@PathVariable String degreeCode){
+    public ResponseEntity getAllCourses(@PathVariable String degreeCode) {
+        logger.info("Received request to get all courses for degree code: {}", degreeCode);
+
         try {
             List<CourseDTO> courseDTOList = courseService.getAllCourses(degreeCode);
+
+            logger.info("Retrieved {} courses for degree code: {}", courseDTOList.size(), degreeCode);
+
             responseDTO.setCode(VarList.RSP_SUCCESS);
             responseDTO.setMessage("Success");
             responseDTO.setContent(courseDTOList);
-            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
 
-        }catch (Exception ex){
+            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
+        } catch (Exception ex) {
+            logger.error("Error occurred while retrieving courses for degree code {}: {}", degreeCode, ex.getMessage());
+
             responseDTO.setCode(VarList.RSP_ERROR);
             responseDTO.setMessage(ex.getMessage());
             responseDTO.setContent(null);
-            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
 
+            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-    @GetMapping("/getAllCousesOfUser/{studRegNumber}")
-    public ResponseEntity getAllCousesOfUser(@PathVariable String studRegNumber){
+    @GetMapping("/getAllCoursesOfUser/{studRegNumber}")
+    public ResponseEntity getAllCoursesOfUser(@PathVariable String studRegNumber) {
+        logger.info("Received request to get all courses of user with registration number: {}", studRegNumber);
+
         try {
             List<CourseDTO> ongoingList = studentService.findOngoingCoursesForStudent(studRegNumber);
             List<CourseDTO> completedList = studentService.findCompletedCoursesForStudent(studRegNumber);
 
+            logger.info("Retrieved ongoing courses: {}", ongoingList);
+            logger.info("Retrieved completed courses: {}", completedList);
+
             responseDTO.setCode(VarList.RSP_SUCCESS);
             responseDTO.setMessage("Success");
             responseDTO.setContent(ongoingList);
-            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
 
-        }catch (Exception ex){
+            return new ResponseEntity(responseDTO, HttpStatus.ACCEPTED);
+        } catch (Exception ex) {
+            logger.error("Error occurred while retrieving courses for user with registration number {}: {}", studRegNumber, ex.getMessage());
+
             responseDTO.setCode(VarList.RSP_ERROR);
             responseDTO.setMessage(ex.getMessage());
             responseDTO.setContent(null);
-            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
 
+            return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 

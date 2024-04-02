@@ -5,7 +5,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import List from '@mui/material/List';
-import Divider from '@mui/material/Divider';
+import Skeleton from '@mui/material/Skeleton';
 import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -53,7 +53,7 @@ export default function PermanentDrawerLeft() {
             p={2}
             sx={{ border: 'Background' }}
           >
-            KDU
+            <Skeleton width={"100%"} height={"20px"}/>
           </Box>
           <List>
             {[

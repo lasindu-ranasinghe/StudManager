@@ -6,7 +6,8 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import PersonPinIcon from '@mui/icons-material/PersonPin';
+import Avatar from '@mui/material/Avatar';
+import { Margin } from '@mui/icons-material';
 
 export default function ButtonAppBar() {
   return (
@@ -26,7 +27,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             StudManager
           </Typography>
-          <Button color="inherit"><PersonPinIcon/>Lasindu</Button>
+          <Button color="inherit"><Avatar>LR</Avatar><span style={{margin:"5px"}}>Lasindu</span></Button>
         </Toolbar>
       </AppBar>
     </Box>
