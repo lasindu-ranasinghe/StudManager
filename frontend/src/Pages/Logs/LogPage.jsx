@@ -5,7 +5,7 @@ export default function LogPage() {
 
   const handleDownload = () => {
     // Fetch the .log file
-    fetch('http://localhost:8080/logs')
+    fetch('http://localhost:8080/api/courses/logs')
       .then(response => response.text()) // Read the content as text
       .then(logContent => {
         // Convert .log content to .txt format (if needed)

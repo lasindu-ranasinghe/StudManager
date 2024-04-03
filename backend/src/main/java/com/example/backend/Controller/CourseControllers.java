@@ -9,13 +9,18 @@ import com.example.backend.util.VarList;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.util.StreamUtils;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 @RestController
@@ -79,6 +84,19 @@ public class CourseControllers {
             responseDTO.setContent(null);
 
             return new ResponseEntity(responseDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+    @GetMapping("/logs")
+    public String getLogs() throws IOException {
+        // Specify the path to your log file
+        String filePath = "appLog.log";
+
+        // Use ClassPathResource to access the file
+        ClassPathResource resource = new ClassPathResource(filePath);
+
+        // Read the content of the file
+        try (InputStream inputStream = resource.getInputStream()) {
+            return StreamUtils.copyToString(inputStream, StandardCharsets.UTF_8);
         }
     }
 
